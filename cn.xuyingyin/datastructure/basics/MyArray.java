@@ -1,7 +1,7 @@
 package datastructure.basics;
 
 /**
- * 数据实现 ：实现基本的增删查改功能
+ * 数组实现 ：实现基本的增删查改功能 ；顺序链表在Java 中的实现就是数组来实现
  */
 public class MyArray {
 
