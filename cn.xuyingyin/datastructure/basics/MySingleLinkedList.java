@@ -6,7 +6,7 @@ package datastructure.basics;
  * @date: 2020/4/7 9:34
  */
 
-public class SingleLinkedList<T> {
+public class MySingleLinkedList<T> {
     /**
      * 单向链表的特点： 1、数据域 2、指针域 3、无固定的物理存储顺序 4、无需指定初始化内存大小
      * 
@@ -16,7 +16,7 @@ public class SingleLinkedList<T> {
 
     private int size;
 
-    SingleLinkedList() {
+    MySingleLinkedList() {
         head = new Node();
         size = 0;
     }
@@ -40,7 +40,9 @@ public class SingleLinkedList<T> {
     public void display() {
         Node<T> currentNode = head;
         while (currentNode != null) {
-            System.out.println(currentNode.data);
+            if (currentNode.data != null) {
+                System.out.println(currentNode.data);
+            }
             currentNode = currentNode.next;
         }
     }
@@ -104,7 +106,6 @@ public class SingleLinkedList<T> {
         public Node() {};
 
         public Node(T data) {
-            super();
             this.data = data;
             this.next = null;
 
@@ -128,18 +129,18 @@ public class SingleLinkedList<T> {
         }
 
         public static void main(String[] args) {
-            SingleLinkedList singleLinkedList = new SingleLinkedList();
-            // singleLinkedList.addFirst(1);
-            // singleLinkedList.addFirst("hello");
-            // singleLinkedList.addFirst(3);
-            // singleLinkedList.printLine();
-            // singleLinkedList.display();
-            singleLinkedList = new SingleLinkedList();
-            singleLinkedList.addLast("a");
-            singleLinkedList.addLast("b");
-            singleLinkedList.addLast("c");
-            singleLinkedList.printLine();
-            singleLinkedList.display();
+            MySingleLinkedList mySingleLinkedList = new MySingleLinkedList();
+            mySingleLinkedList.addFirst(1);
+            mySingleLinkedList.addFirst("hello");
+            mySingleLinkedList.addFirst(3);
+            mySingleLinkedList.printLine();
+            mySingleLinkedList.display();
+            mySingleLinkedList = new MySingleLinkedList();
+            mySingleLinkedList.addLast("a");
+            mySingleLinkedList.addLast("b");
+            mySingleLinkedList.addLast("c");
+            mySingleLinkedList.printLine();
+            mySingleLinkedList.display();
         }
     }
 }
