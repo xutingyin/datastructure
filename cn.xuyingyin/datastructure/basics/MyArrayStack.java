@@ -1,9 +1,14 @@
 package datastructure.basics;
 
+import java.util.Stack;
+
 /**
- * 栈的基本功能 ： stack 是一种LIFO(Last In First Out)的特殊线性表结构。 只允许在一端进行入栈、出栈操作。 这里未考虑扩容的情况
+ * @description: 栈的基本功能 ： 栈是一种只能从表的一端存取数据且遵循 "先进后出" 原则的线性存储结构。 只允许在一端进行入栈、出栈操作。 栈的实现方式有两种：一种是数组的实现、另一种是链表的实现
+ * @author: Tingyin.Xu
+ * @date: 2020/4/9 14:00
  */
-public class MyStack {
+
+public class MyArrayStack {
 
     // 数组存储元素
     private Object[] array;
@@ -17,7 +22,7 @@ public class MyStack {
     /**
      * 默认构造函数，构造一个容量为50的栈
      */
-    public MyStack() {
+    public MyArrayStack() {
         this.size = 50;
         this.array = new Object[size];
         this.top = -1;
@@ -28,7 +33,7 @@ public class MyStack {
      * 
      * @param size
      */
-    public MyStack(int size) {
+    public MyArrayStack(int size) {
         this.array = new Object[size];
         this.size = size;
         this.top = -1;
@@ -41,6 +46,7 @@ public class MyStack {
      */
     public void push(Object value) {
         if (top < size - 1) {// 栈还未满
+            // 这里为什么是 ++top 而不是top ++
             array[++top] = value;
         }
     }
@@ -87,15 +93,25 @@ public class MyStack {
     }
 
     public static void main(String[] args) {
-        MyStack stack = new MyStack();
+        MyArrayStack stack = new MyArrayStack();
         stack.push(1);
         stack.push(2);
         stack.push(3);
         stack.push("acc");
         System.out.println(stack.peek());
         stack.printLine();
-        while (!stack.isEmpty())
+        while (!stack.isEmpty()) {
             System.out.println(stack.pop());
+        }
+        stack.printLine();
+        Stack<String> s = new Stack<>();
+        s.push("a");
+        s.push("b");
+        s.push("c");
+
+        while (!s.isEmpty()) {
+            System.out.println(s.pop());
+        }
     }
 
 }
