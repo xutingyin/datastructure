@@ -9,7 +9,6 @@ package datastructure.basics;
 public class MySingleLinkedList<T> {
     /**
      * 单向链表的特点： 1、数据域 2、指针域 3、无固定的物理存储顺序 4、无需指定初始化内存大小
-     * 
      */
     // 头结点
     private Node head;
@@ -23,7 +22,7 @@ public class MySingleLinkedList<T> {
 
     /**
      * 返回链表的实际容量
-     * 
+     *
      * @return
      */
     public int size() {
@@ -49,7 +48,7 @@ public class MySingleLinkedList<T> {
 
     /**
      * 尾插法，插入元素
-     * 
+     *
      * @param e
      */
     public void addLast(T e) {
@@ -72,9 +71,8 @@ public class MySingleLinkedList<T> {
 
     /**
      * 头插法，插入元素
-     * 
-     * @param e
-     *            添加元素
+     *
+     * @param e 添加元素
      */
     public void addFirst(T e) {
         Node<T> newNode = new Node<T>(e);
@@ -103,7 +101,10 @@ public class MySingleLinkedList<T> {
 
         private Node next;
 
-        public Node() {};
+        public Node() {
+        }
+
+        ;
 
         public Node(T data) {
             this.data = data;
@@ -141,6 +142,8 @@ public class MySingleLinkedList<T> {
             mySingleLinkedList.addLast("c");
             mySingleLinkedList.printLine();
             mySingleLinkedList.display();
+//            ThreadLocal
+//            ArrayList
         }
     }
 }
