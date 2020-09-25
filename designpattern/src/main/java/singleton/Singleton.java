@@ -1,4 +1,4 @@
-package designpattern.singleton;
+package singleton;
 
 /**
  * 最不安全的单例模式

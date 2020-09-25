@@ -1,4 +1,4 @@
-package designpattern.singleton;
+package singleton;
 
 /**
  * @description:懒汉式单例：要用的时候才进行实例的创建,是线程安全的
