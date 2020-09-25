@@ -56,7 +56,7 @@
        
        线性存储结构 又分为 ：
        
-![](cn.xuyingyin/datastructure/resoures/linearList.gif)  
+![](datastruct/src/main/java/resoures/linearList.gif)  
       
        顺序存储结构(顺序表)：如上图 3a,将数据依次存储在连续的整块物理空间中
       
@@ -68,4 +68,4 @@
        某一元素的右侧相邻元素称为“直接后继”，位于此元素右侧的所有元素都统称为“后继元素”；
        
        如下图：元素 3 有2个前驱元素，分别为1、2；有两个后继元素，分别为4、5；它的直接前驱为2、直接后继为4
-![](cn.xuyingyin/datastructure/resoures/pre_next.gif)          
+![](datastruct/src/main/java/resoures/pre_next.gif)          
