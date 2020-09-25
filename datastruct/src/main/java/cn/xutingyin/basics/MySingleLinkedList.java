@@ -1,4 +1,4 @@
-package datastructure.basics;
+package cn.xutingyin.basics;
 
 /**
  * @description:单向链表的实现-CRUD
@@ -72,7 +72,8 @@ public class MySingleLinkedList<T> {
     /**
      * 头插法，插入元素
      *
-     * @param e 添加元素
+     * @param e
+     *            添加元素
      */
     public void addFirst(T e) {
         Node<T> newNode = new Node<T>(e);
@@ -101,8 +102,7 @@ public class MySingleLinkedList<T> {
 
         private Node next;
 
-        public Node() {
-        }
+        public Node() {}
 
         ;
 
@@ -142,8 +142,8 @@ public class MySingleLinkedList<T> {
             mySingleLinkedList.addLast("c");
             mySingleLinkedList.printLine();
             mySingleLinkedList.display();
-//            ThreadLocal
-//            ArrayList
+            // ThreadLocal
+            // ArrayList
         }
     }
 }

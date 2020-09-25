@@ -1,4 +1,4 @@
-package datastructure.basics;
+package cn.xutingyin.basics;
 
 /**
  * @description: 链表实现栈
